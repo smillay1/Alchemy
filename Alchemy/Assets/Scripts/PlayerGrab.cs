@@ -31,6 +31,7 @@ public class PlayerGrab : MonoBehaviour
                 heldObject.GetComponent<Rigidbody>().isKinematic = true;
                 heldObject.transform.SetParent(holdPoint);
                 heldObject.transform.localPosition = Vector3.zero;
+                Debug.Log("Picked up " + heldObject.name);
             }
         }
     }
@@ -39,6 +40,8 @@ public class PlayerGrab : MonoBehaviour
     {
         heldObject.transform.SetParent(null);
         heldObject.GetComponent<Rigidbody>().isKinematic = false;
+        Debug.Log("Dropped " + heldObject.name);
         heldObject = null;
     }
+
 }

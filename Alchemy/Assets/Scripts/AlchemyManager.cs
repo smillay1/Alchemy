@@ -6,6 +6,11 @@ public class AlchemyManager : MonoBehaviour
     public static AlchemyManager Instance;
 
     private Dictionary<HashSet<string>, string> recipes = new();
+    public Dictionary<string, GameObject> resultPrefabs = new();
+
+    public GameObject strengthPrefab;
+
+
 
     void Awake()
     {
@@ -13,6 +18,8 @@ public class AlchemyManager : MonoBehaviour
 
 
         recipes.Add(new HashSet<string> { "Beer", "Horse Hair" }, "Strength");
+        resultPrefabs["Strength"] = strengthPrefab;
+
         recipes.Add(new HashSet<string> { "Mushroom", "Son's Eye" }, "Confusion");
     }
 

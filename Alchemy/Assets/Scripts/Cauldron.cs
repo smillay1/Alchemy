@@ -30,7 +30,16 @@ public class Cauldron : MonoBehaviour
     if (result != null)
     {
         Debug.Log("Created: " + result);
+
+        // Spawn the result next to the cauldron
+        if (AlchemyManager.Instance.resultPrefabs.TryGetValue(result, out GameObject prefab))
+        {
+            //Position of the resulting potion
+            Vector3 spawnPos = transform.position + transform.right * 1.2f;
+            Instantiate(prefab, spawnPos, Quaternion.identity);
+        }
     }
+
     else
     {
         Debug.Log("Nothing happened.");

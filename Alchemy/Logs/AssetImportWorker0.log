@@ -22,7 +22,7 @@ AssetImportWorker0
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-53626
+54288
 -job-worker-count
 5
 -background-job-worker-count
@@ -66,12 +66,12 @@ Successfully changed project path to: /Users/sammillay/Desktop/Alchemy/Alchemy
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Player connection [8718512640]  Target information:
+Player connection [8747573760]  Target information:
 
-Player connection [8718512640]  * "[IP] 10.0.52.48 [Port] 0 [Flags] 2 [Guid] 1198989546 [EditorId] 1198989546 [Version] 1048832 [Id] OSXEditor(0,800G2-1861.DisStu.local) [Debug] 1 [PackageName] OSXEditor [ProjectName] Editor" 
+Player connection [8747573760]  * "[IP] 10.0.52.48 [Port] 0 [Flags] 2 [Guid] 2733840795 [EditorId] 2733840795 [Version] 1048832 [Id] OSXEditor(0,800G2-1861.DisStu.local) [Debug] 1 [PackageName] OSXEditor [ProjectName] Editor" 
 
-Player connection [8718512640] Host joined multi-casting on [225.0.0.222:54997]...
-Player connection [8718512640] Host joined alternative multi-casting on [225.0.0.222:34997]...
+Player connection [8747573760] Host joined multi-casting on [225.0.0.222:54997]...
+Player connection [8747573760] Host joined alternative multi-casting on [225.0.0.222:34997]...
 JobSystem: Creating JobQueue using job-worker-count value 5
 Input System module state changed to: Initialized.
 [Physics::Module] Initialized fallback backend.
@@ -83,7 +83,7 @@ Library Redirect Path: Library/
 [Physics::Module] SDK Version: 4.1.2
 [Physics::Module] Integration Version: 1.0.0
 [Physics::Module] Threading Mode: Multi-Threaded
-Refreshing native plugins compatible for Editor in 4.43 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 7.53 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 6000.0.34f1 (5ab2d9ed9190)
 [Subsystems] Discovering subsystems at path /Applications/Unity/Hub/Editor/6000.0.34f1/Unity.app/Contents/Resources/UnitySubsystems
@@ -98,45 +98,45 @@ Initialize mono
 Mono path[0] = '/Applications/Unity/Hub/Editor/6000.0.34f1/Unity.app/Contents/Managed'
 Mono path[1] = '/Applications/Unity/Hub/Editor/6000.0.34f1/Unity.app/Contents/MonoBleedingEdge/lib/mono/unityjit-macos'
 Mono config path = '/Applications/Unity/Hub/Editor/6000.0.34f1/Unity.app/Contents/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56067
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56545
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: /Applications/Unity/Hub/Editor/6000.0.34f1/Unity.app/Contents/PlaybackEngines/MacStandaloneSupport/UnityEditor.OSXStandalone.Extensions.dll
 Register platform support module: /Applications/Unity/Hub/Editor/6000.0.34f1/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.002714 seconds.
-- Loaded All Assemblies, in  0.801 seconds
+Registered in 0.001190 seconds.
+- Loaded All Assemblies, in  0.755 seconds
 Native extension for WindowsStandalone target not found
 Native extension for OSXStandalone target not found
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  2.230 seconds
-Domain Reload Profiling: 3033ms
-	BeginReloadAssembly (300ms)
+- Finished resetting the current domain, in  2.323 seconds
+Domain Reload Profiling: 3080ms
+	BeginReloadAssembly (268ms)
 		ExecutionOrderSort (0ms)
 		DisableScriptedObjects (0ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (8ms)
-	RebuildCommonClasses (55ms)
-	RebuildNativeTypeToScriptingClass (17ms)
-	initialDomainReloadingComplete (188ms)
-	LoadAllAssembliesAndSetupDomain (241ms)
-		LoadAssemblies (293ms)
+		CreateAndSetChildDomain (4ms)
+	RebuildCommonClasses (54ms)
+	RebuildNativeTypeToScriptingClass (16ms)
+	initialDomainReloadingComplete (181ms)
+	LoadAllAssembliesAndSetupDomain (235ms)
+		LoadAssemblies (264ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (230ms)
-			TypeCache.Refresh (226ms)
-				TypeCache.ScanAssembly (207ms)
+		AnalyzeDomain (224ms)
+			TypeCache.Refresh (220ms)
+				TypeCache.ScanAssembly (200ms)
 			BuildScriptInfoCaches (0ms)
-			ResolveRequiredComponents (3ms)
-	FinalizeReload (2232ms)
+			ResolveRequiredComponents (2ms)
+	FinalizeReload (2326ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (2132ms)
+		SetupLoadedEditorAssemblies (2223ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (265ms)
-			SetLoadedEditorAssemblies (13ms)
-			BeforeProcessingInitializeOnLoad (387ms)
-			ProcessInitializeOnLoadAttributes (985ms)
-			ProcessInitializeOnLoadMethodAttributes (481ms)
+			InitializePlatformSupportModulesInManaged (283ms)
+			SetLoadedEditorAssemblies (15ms)
+			BeforeProcessingInitializeOnLoad (420ms)
+			ProcessInitializeOnLoadAttributes (969ms)
+			ProcessInitializeOnLoadMethodAttributes (536ms)
 			AfterProcessingInitializeOnLoad (0ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
@@ -145,99 +145,253 @@ Domain Reload Profiling: 3033ms
 Worker process is ready to serve import requests
 Import Worker Mode flag is 0x00
 Begin MonoManager ReloadAssembly
-- Loaded All Assemblies, in  1.441 seconds
-Refreshing native plugins compatible for Editor in 0.37 ms, found 2 plugins.
+- Loaded All Assemblies, in  1.371 seconds
+Refreshing native plugins compatible for Editor in 0.40 ms, found 2 plugins.
 Native extension for WindowsStandalone target not found
 Native extension for OSXStandalone target not found
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  3.298 seconds
-Domain Reload Profiling: 4741ms
-	BeginReloadAssembly (454ms)
+- Finished resetting the current domain, in  3.209 seconds
+Domain Reload Profiling: 4582ms
+	BeginReloadAssembly (413ms)
 		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (63ms)
+		DisableScriptedObjects (58ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (53ms)
-	RebuildCommonClasses (54ms)
+		CreateAndSetChildDomain (51ms)
+	RebuildCommonClasses (55ms)
 	RebuildNativeTypeToScriptingClass (16ms)
-	initialDomainReloadingComplete (145ms)
-	LoadAllAssembliesAndSetupDomain (771ms)
-		LoadAssemblies (693ms)
+	initialDomainReloadingComplete (136ms)
+	LoadAllAssembliesAndSetupDomain (751ms)
+		LoadAssemblies (646ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (290ms)
-			TypeCache.Refresh (212ms)
-				TypeCache.ScanAssembly (191ms)
-			BuildScriptInfoCaches (60ms)
-			ResolveRequiredComponents (15ms)
-	FinalizeReload (3301ms)
+		AnalyzeDomain (283ms)
+			TypeCache.Refresh (204ms)
+				TypeCache.ScanAssembly (185ms)
+			BuildScriptInfoCaches (63ms)
+			ResolveRequiredComponents (13ms)
+	FinalizeReload (3211ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (2884ms)
+		SetupLoadedEditorAssemblies (2765ms)
 			LogAssemblyErrors (0ms)
 			InitializePlatformSupportModulesInManaged (16ms)
-			SetLoadedEditorAssemblies (15ms)
-			BeforeProcessingInitializeOnLoad (401ms)
-			ProcessInitializeOnLoadAttributes (2286ms)
-			ProcessInitializeOnLoadMethodAttributes (165ms)
+			SetLoadedEditorAssemblies (16ms)
+			BeforeProcessingInitializeOnLoad (441ms)
+			ProcessInitializeOnLoadAttributes (2133ms)
+			ProcessInitializeOnLoadMethodAttributes (158ms)
 			AfterProcessingInitializeOnLoad (1ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (15ms)
+		AwakeInstancesAfterBackupRestoration (12ms)
 Launching external process: /Applications/Unity/Hub/Editor/6000.0.34f1/Unity.app/Contents/Tools/UnityShaderCompiler
 Launched and connected shader compiler UnityShaderCompiler after 0.11 seconds
-Refreshing native plugins compatible for Editor in 0.45 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 0.54 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 8 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 3536 unused Assets / (1.0 MB). Loaded Objects now: 4020.
-Memory consumption went from 76.8 MB to 75.9 MB.
-Total: 8.137000 ms (FindLiveObjects: 1.064833 ms CreateObjectMapping: 0.193291 ms MarkObjects: 5.157208 ms  DeleteObjects: 1.720959 ms)
+Unloading 3697 unused Assets / (0.8 MB). Loaded Objects now: 4184.
+Memory consumption went from 77.9 MB to 77.1 MB.
+Total: 7.288625 ms (FindLiveObjects: 0.746458 ms CreateObjectMapping: 0.218708 ms MarkObjects: 5.280834 ms  DeleteObjects: 1.041709 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 3440853.891199 seconds.
+  path: Assets/Scripts
+  artifactKey: Guid(cc611d0e0b12c44ed9b0dace41821a71) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts using Guid(cc611d0e0b12c44ed9b0dace41821a71) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'e95d99672edd311642be593a01f58e7c') in 0.010156459 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
 
 ========================================================================
 Received Prepare
 Begin MonoManager ReloadAssembly
-- Loaded All Assemblies, in  1.395 seconds
-Refreshing native plugins compatible for Editor in 0.39 ms, found 2 plugins.
+- Loaded All Assemblies, in  1.424 seconds
+Refreshing native plugins compatible for Editor in 0.42 ms, found 2 plugins.
 Native extension for WindowsStandalone target not found
 Native extension for OSXStandalone target not found
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  3.338 seconds
-Domain Reload Profiling: 4738ms
-	BeginReloadAssembly (505ms)
+- Finished resetting the current domain, in  3.227 seconds
+Domain Reload Profiling: 4655ms
+	BeginReloadAssembly (541ms)
 		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (51ms)
+		DisableScriptedObjects (58ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (117ms)
-	RebuildCommonClasses (55ms)
+		CreateAndSetChildDomain (121ms)
+	RebuildCommonClasses (53ms)
 	RebuildNativeTypeToScriptingClass (16ms)
-	initialDomainReloadingComplete (96ms)
-	LoadAllAssembliesAndSetupDomain (725ms)
-		LoadAssemblies (675ms)
+	initialDomainReloadingComplete (87ms)
+	LoadAllAssembliesAndSetupDomain (728ms)
+		LoadAssemblies (732ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (247ms)
-			TypeCache.Refresh (64ms)
-				TypeCache.ScanAssembly (51ms)
-			BuildScriptInfoCaches (164ms)
-			ResolveRequiredComponents (16ms)
-	FinalizeReload (3341ms)
+		AnalyzeDomain (228ms)
+			TypeCache.Refresh (13ms)
+				TypeCache.ScanAssembly (0ms)
+			BuildScriptInfoCaches (197ms)
+			ResolveRequiredComponents (13ms)
+	FinalizeReload (3230ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (2914ms)
+		SetupLoadedEditorAssemblies (2774ms)
 			LogAssemblyErrors (0ms)
 			InitializePlatformSupportModulesInManaged (17ms)
-			SetLoadedEditorAssemblies (11ms)
-			BeforeProcessingInitializeOnLoad (436ms)
-			ProcessInitializeOnLoadAttributes (2292ms)
-			ProcessInitializeOnLoadMethodAttributes (157ms)
+			SetLoadedEditorAssemblies (14ms)
+			BeforeProcessingInitializeOnLoad (461ms)
+			ProcessInitializeOnLoadAttributes (2121ms)
+			ProcessInitializeOnLoadMethodAttributes (160ms)
 			AfterProcessingInitializeOnLoad (1ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
 		AwakeInstancesAfterBackupRestoration (14ms)
-Refreshing native plugins compatible for Editor in 0.58 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 0.59 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 1 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 3534 unused Assets / (0.9 MB). Loaded Objects now: 4021.
-Memory consumption went from 82.9 MB to 82.0 MB.
-Total: 6.341459 ms (FindLiveObjects: 0.452125 ms CreateObjectMapping: 0.299291 ms MarkObjects: 4.677000 ms  DeleteObjects: 0.912167 ms)
+Unloading 3695 unused Assets / (0.9 MB). Loaded Objects now: 4187.
+Memory consumption went from 84.3 MB to 83.5 MB.
+Total: 6.951834 ms (FindLiveObjects: 0.428667 ms CreateObjectMapping: 0.218041 ms MarkObjects: 5.307833 ms  DeleteObjects: 0.996333 ms)
 
 Prepare: number of updated asset objects reloaded= 0
+========================================================================
+Received Import Request.
+  Time since last request: 33.844847 seconds.
+  path: Assets/Scripts/Scripts/CharacterMotor.cs
+  artifactKey: Guid(c00394b5a5b346b4a82cd8e0aeadeb45) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Scripts/CharacterMotor.cs using Guid(c00394b5a5b346b4a82cd8e0aeadeb45) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '749622b3f48e07b408d88f075cd0ee90') in 0.00493925 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.353452 seconds.
+  path: Assets/Scripts/Scripts/FPSInputController.cs
+  artifactKey: Guid(de41ee9d0909f4f4a8110d91a01352ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Scripts/FPSInputController.cs using Guid(de41ee9d0909f4f4a8110d91a01352ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '74a6063975d96b3092a66f29b268e6d1') in 0.001072667 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+- Loaded All Assemblies, in  1.463 seconds
+Refreshing native plugins compatible for Editor in 0.36 ms, found 2 plugins.
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  3.174 seconds
+Domain Reload Profiling: 4642ms
+	BeginReloadAssembly (534ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (60ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (119ms)
+	RebuildCommonClasses (52ms)
+	RebuildNativeTypeToScriptingClass (16ms)
+	initialDomainReloadingComplete (89ms)
+	LoadAllAssembliesAndSetupDomain (775ms)
+		LoadAssemblies (783ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (233ms)
+			TypeCache.Refresh (14ms)
+				TypeCache.ScanAssembly (0ms)
+			BuildScriptInfoCaches (199ms)
+			ResolveRequiredComponents (15ms)
+	FinalizeReload (3177ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (2735ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (20ms)
+			SetLoadedEditorAssemblies (16ms)
+			BeforeProcessingInitializeOnLoad (451ms)
+			ProcessInitializeOnLoadAttributes (2086ms)
+			ProcessInitializeOnLoadMethodAttributes (161ms)
+			AfterProcessingInitializeOnLoad (1ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (13ms)
+Refreshing native plugins compatible for Editor in 0.49 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 0 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 3695 unused Assets / (0.8 MB). Loaded Objects now: 4187.
+Memory consumption went from 83.7 MB to 82.9 MB.
+Total: 6.668791 ms (FindLiveObjects: 0.502208 ms CreateObjectMapping: 0.199000 ms MarkObjects: 5.048916 ms  DeleteObjects: 0.917875 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+========================================================================
+Received Import Request.
+  Time since last request: 44.575235 seconds.
+  path: Assets/Utilities/GameLogic3D
+  artifactKey: Guid(2542cf55e98444ecdbc44573f03d0a8b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Utilities/GameLogic3D using Guid(2542cf55e98444ecdbc44573f03d0a8b) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '9e0c9945be8fc05935a9a07642d67353') in 0.00605 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 10.947811 seconds.
+  path: Assets/Prefabs
+  artifactKey: Guid(88bbade340fb946269b6f7478f4841e1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs using Guid(88bbade340fb946269b6f7478f4841e1) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '07d07a970b2ef21ce1c432ba4fceeafa') in 0.001524041 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+- Loaded All Assemblies, in  1.459 seconds
+Refreshing native plugins compatible for Editor in 0.56 ms, found 2 plugins.
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  3.468 seconds
+Domain Reload Profiling: 4932ms
+	BeginReloadAssembly (527ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (57ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (121ms)
+	RebuildCommonClasses (53ms)
+	RebuildNativeTypeToScriptingClass (16ms)
+	initialDomainReloadingComplete (85ms)
+	LoadAllAssembliesAndSetupDomain (781ms)
+		LoadAssemblies (788ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (232ms)
+			TypeCache.Refresh (17ms)
+				TypeCache.ScanAssembly (0ms)
+			BuildScriptInfoCaches (197ms)
+			ResolveRequiredComponents (15ms)
+	FinalizeReload (3471ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (2904ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (19ms)
+			SetLoadedEditorAssemblies (22ms)
+			BeforeProcessingInitializeOnLoad (475ms)
+			ProcessInitializeOnLoadAttributes (2211ms)
+			ProcessInitializeOnLoadMethodAttributes (175ms)
+			AfterProcessingInitializeOnLoad (1ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (16ms)
+Refreshing native plugins compatible for Editor in 0.51 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 0 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 3695 unused Assets / (1.1 MB). Loaded Objects now: 4187.
+Memory consumption went from 83.7 MB to 82.6 MB.
+Total: 7.720833 ms (FindLiveObjects: 1.054042 ms CreateObjectMapping: 0.243916 ms MarkObjects: 4.874708 ms  DeleteObjects: 1.547583 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+========================================================================
+Received Import Request.
+  Time since last request: 52.991723 seconds.
+  path: Assets/New Folder
+  artifactKey: Guid(73a53d29ee6534ce0a5e1ec2f21300bf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/New Folder using Guid(73a53d29ee6534ce0a5e1ec2f21300bf) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'e098e11c59c0d56e34170a8100fffa4f') in 0.004751416 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 9.378986 seconds.
+  path: Assets/Sprites
+  artifactKey: Guid(73a53d29ee6534ce0a5e1ec2f21300bf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites using Guid(73a53d29ee6534ce0a5e1ec2f21300bf) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'e7d2c143a88ac0a388013cb72e089d0c') in 0.004470375 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+

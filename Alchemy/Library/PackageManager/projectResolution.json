@@ -8,6 +8,14 @@
     "/Users/sammillay/Desktop/Alchemy/Alchemy/Packages/packages-lock.json"
   ],
   "outputs": {
+    "com.unity.ai.navigation@2.0.7": {
+      "name": "com.unity.ai.navigation",
+      "resolvedPath": "/Users/sammillay/Desktop/Alchemy/Alchemy/Library/PackageCache/com.unity.ai.navigation",
+      "fingerprint": "39ae74efb85f9b44dc389774fc59c2ce4a8aa3b6",
+      "editorCompatibility": "6000.0.0a1",
+      "version": "2.0.7",
+      "source": "registry"
+    },
     "com.unity.collab-proxy@2.7.1": {
       "name": "com.unity.collab-proxy",
       "resolvedPath": "/Users/sammillay/Desktop/Alchemy/Alchemy/Library/PackageCache/com.unity.collab-proxy",

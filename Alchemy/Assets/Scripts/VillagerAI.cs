@@ -9,6 +9,9 @@ public class VillagerAI : MonoBehaviour
     private Transform targetTransform; // Where the booth is
     public string requestedPotion;   // e.g., "Cure Sickness"
 
+    //Where the villager goes to after getting the potion
+    public Transform exitPoint;
+
     private NavMeshAgent agent;
 
     void Start()
@@ -43,10 +46,20 @@ public class VillagerAI : MonoBehaviour
                 Debug.Log("Villager waiting for: " + requestedPotion);
             }
         }
+
+        if (currentState == State.Leaving)
+        {
+            if (!agent.pathPending && agent.remainingDistance < 0.2f)
+            {
+                Debug.Log("Villager exited.");
+                Destroy(gameObject); // or disable, or pool for reuse
+            }
+        }
+
     }
 
     public void ReceivePotion(string potionName)
-{
+    {
     if (potionName == requestedPotion)
     {
         Debug.Log("✅ Correct potion given!");
@@ -59,7 +72,8 @@ public class VillagerAI : MonoBehaviour
     }
 
     currentState = State.Leaving;
-    agent.SetDestination(transform.position + Vector3.back * 5f); // walk away
+    agent.SetDestination(exitPoint.position);
+
 }
 
 }

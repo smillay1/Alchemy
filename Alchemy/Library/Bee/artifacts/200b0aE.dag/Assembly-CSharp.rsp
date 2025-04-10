@@ -409,6 +409,7 @@
 "Assets/Scripts/MouseLook.cs"
 "Assets/Scripts/PlayerGrab.cs"
 "Assets/Scripts/VillagerAI.cs"
+"Assets/Scripts/VillagerManager.cs"
 -langversion:9.0
 /deterministic
 /optimize+

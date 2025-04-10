@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 7292766614044545117}
   - component: {fileID: -6357790002653882084}
   - component: {fileID: 8886362679948311066}
-  - component: {fileID: 2570147092676998311}
+  - component: {fileID: 5353311977423038080}
   m_Layer: 0
   m_Name: Villager
   m_TagString: Villager
@@ -162,7 +162,7 @@ NavMeshAgent:
   m_BaseOffset: 1
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
---- !u!114 &2570147092676998311
+--- !u!114 &5353311977423038080
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -175,4 +175,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentState: 0
-  requestedPotion: Cure Sickness Potion
+  targetTransform: {fileID: 0}
+  requestedPotion: 
+  exitPoint: {fileID: 0}
+  manager: {fileID: 0}

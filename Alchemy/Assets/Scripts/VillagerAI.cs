@@ -97,10 +97,12 @@ public class VillagerAI : MonoBehaviour
         if (potionName == requestedPotion)
         {
             Debug.Log("✅ Correct potion");
+            TrustManager.Instance.ModifyTrust(+1);
         }
         else
         {
           Debug.Log("❌ Wrong potion");
+            TrustManager.Instance.ModifyTrust(-1);
         }
 
         currentState = State.Idle;

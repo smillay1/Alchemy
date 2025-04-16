@@ -408,6 +408,7 @@
 "Assets/Scripts/Ingredient.cs"
 "Assets/Scripts/MouseLook.cs"
 "Assets/Scripts/PlayerGrab.cs"
+"Assets/Scripts/TrustManager.cs"
 "Assets/Scripts/VillagerAI.cs"
 "Assets/Scripts/VillagerManager.cs"
 -langversion:9.0

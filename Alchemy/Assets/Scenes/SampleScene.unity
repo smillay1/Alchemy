@@ -601,6 +601,9 @@ MonoBehaviour:
   - Strength
   - Confusion
   - Cure Sickness
+  - Charisma
+  - Fire Goblet
+  - Courage
   allVillagers: []
 --- !u!4 &274855982
 Transform:

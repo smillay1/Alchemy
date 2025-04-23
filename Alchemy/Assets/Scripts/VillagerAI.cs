@@ -24,6 +24,8 @@ public class VillagerAI : MonoBehaviour
     private float wanderRadius = 5f;
     private float wanderTimer = 5f;
     private float wanderCooldown;
+    public bool taskCompleted = false;
+
 
 
 
@@ -104,10 +106,12 @@ public class VillagerAI : MonoBehaviour
           Debug.Log("❌ Wrong potion");
             TrustManager.Instance.ModifyTrust(-1);
         }
+        taskCompleted = true;
 
         currentState = State.Idle;
         wanderCooldown = 0f; // triggers wandering immediately again
         manager.SendNextVillagerToBooth(); // next one approaches
+        manager.CheckIfAllTasksComplete();
     }
 
 

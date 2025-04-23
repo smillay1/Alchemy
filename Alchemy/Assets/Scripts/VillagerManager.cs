@@ -16,6 +16,7 @@ public class VillagerManager : MonoBehaviour
 
     public List<VillagerAI> allVillagers = new List<VillagerAI>();
     private int currentIndex = 0;
+    public Door[] villageDoors;
 
 
     void Start()
@@ -67,5 +68,19 @@ public class VillagerManager : MonoBehaviour
 
 
         currentVillager = villager;
+    }
+
+    public void CheckIfAllTasksComplete()
+    {
+        bool allComplete = allVillagers.TrueForAll(v => v.taskCompleted);
+
+        if (allComplete)
+        {
+            Debug.Log("🏁 All villagers completed! Opening doors.");
+            foreach (Door door in villageDoors)
+            {
+                door.OpenDoor();
+            }
+        }
     }
 }

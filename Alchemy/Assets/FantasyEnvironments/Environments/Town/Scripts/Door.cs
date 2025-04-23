@@ -1,29 +1,19 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class Door : MonoBehaviour {
-	public Animator anim;
+    private Animator anim;
+    private bool isOpen = false;
 
-	// Use this for initialization
-	void Start () {
-		anim = GetComponent<Animator> ();
-	}
+    void Start() {
+        anim = GetComponent<Animator>();
+    }
 
-	void OnTriggerEnter (Collider other) {
-		anim.SetBool ("DoorOpen", true);
-		anim.SetBool ("DoorClose", false);
-
-	}
-
-	void OnTriggerExit (Collider other) {
-		anim.SetBool ("DoorOpen", false);
-		anim.SetBool ("DoorClose", true);
-
-	}
-
-	// Update is called once per frame
-	void Update () {
-		
-	}
+    // 🚪 Call this from VillagerManager when all tasks are complete
+    public void OpenDoor() {
+        if (!isOpen) {
+            anim.SetBool("DoorOpen", true);
+            anim.SetBool("DoorClose", false);
+            isOpen = true;
+        }
+    }
 }

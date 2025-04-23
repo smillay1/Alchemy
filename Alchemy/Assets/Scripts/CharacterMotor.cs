@@ -194,6 +194,8 @@ public class CharacterMotor : MonoBehaviour
 	{
 		controller = GetComponent<CharacterController> ();
 		tr = transform;
+		Cursor.lockState = CursorLockMode.Locked;
+		Cursor.visible = false;
 	}
 
 	private void UpdateFunction ()

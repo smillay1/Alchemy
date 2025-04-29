@@ -406,7 +406,6 @@
 "Assets/Scripts/Cauldron.cs"
 "Assets/Scripts/CharacterMotor.cs"
 "Assets/Scripts/DeliveryZone.cs"
-"Assets/Scripts/DoorTrigger.cs"
 "Assets/Scripts/FPSInputController.cs"
 "Assets/Scripts/Ingredient.cs"
 "Assets/Scripts/MouseLook.cs"

@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.AI;
+using TMPro;
 
 public class VillagerAI : MonoBehaviour
 {
@@ -7,18 +8,16 @@ public class VillagerAI : MonoBehaviour
 
     public State currentState = State.Walking;
 
-     // Where the booth is
+    // Where the booth is
     public Transform targetTransform;
 
     // The potion the villager is requesting
     public string requestedPotion;
 
-    //Where the villager goes to after getting the potion
+    // Where the villager goes after getting the potion
     public Transform exitPoint;
 
     public NavMeshAgent agent;
-
-
     public VillagerManager manager;
 
     private float wanderRadius = 5f;
@@ -26,25 +25,30 @@ public class VillagerAI : MonoBehaviour
     private float wanderCooldown;
     public bool taskCompleted = false;
 
-
-
+    public GameObject requestUIPrefab;
+    public Transform uiSpawnPoint;
+    private GameObject requestUIInstance;
+    private TextMeshProUGUI requestUIText;
 
     void Start()
     {
-    manager.RegisterVillager(this);
+        manager.RegisterVillager(this);
 
-    agent = GetComponent<NavMeshAgent>();
-    agent.updateRotation = false;
+        agent = GetComponent<NavMeshAgent>();
+        agent.updateRotation = false;
 
+        if (requestUIPrefab != null && uiSpawnPoint != null)
+        {
+            requestUIInstance = Instantiate(requestUIPrefab, uiSpawnPoint.position, Quaternion.identity, uiSpawnPoint);
+            requestUIText = requestUIInstance.GetComponentInChildren<TextMeshProUGUI>();
+            UpdatePotionRequest();
+        }
 
-    agent.SetDestination(targetTransform.position);
-
+        agent.SetDestination(targetTransform.position);
     }
 
     void Update()
     {
-
-
         if (currentState == State.Walking)
         {
             if (!agent.pathPending && agent.remainingDistance <= 0.2f)
@@ -69,7 +73,6 @@ public class VillagerAI : MonoBehaviour
             transform.forward = agent.velocity.normalized;
         }
 
-
         if (currentState == State.Idle)
         {
             wanderCooldown -= Time.deltaTime;
@@ -78,20 +81,14 @@ public class VillagerAI : MonoBehaviour
             {
                 Vector3 randomDirection = Random.insideUnitSphere * wanderRadius;
                 randomDirection += transform.position;
-                NavMeshHit hit;
-
-                if (NavMesh.SamplePosition(randomDirection, out hit, wanderRadius, NavMesh.AllAreas))
+                if (NavMesh.SamplePosition(randomDirection, out NavMeshHit hit, wanderRadius, NavMesh.AllAreas))
                 {
                     agent.SetDestination(hit.position);
                 }
 
                 wanderCooldown = wanderTimer;
-    }
-}
-
-
-
-
+            }
+        }
     }
 
     public void ReceivePotion(string potionName)
@@ -103,16 +100,22 @@ public class VillagerAI : MonoBehaviour
         }
         else
         {
-          Debug.Log("❌ Wrong potion");
+            Debug.Log("❌ Wrong potion");
             TrustManager.Instance.ModifyTrust(-1);
         }
-        taskCompleted = true;
 
+        taskCompleted = true;
         currentState = State.Idle;
         wanderCooldown = 0f; // triggers wandering immediately again
         manager.SendNextVillagerToBooth(); // next one approaches
         manager.CheckIfAllTasksComplete();
     }
 
-
+    private void UpdatePotionRequest()
+    {
+        if (requestUIText != null)
+        {
+            requestUIText.text = requestedPotion;
+        }
+    }
 }

@@ -1,23 +1,23 @@
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class TrustManager : MonoBehaviour
 {
     public static TrustManager Instance;
 
-    public int trustLevel = 5;
     public int maxTrust = 20;
     public int minTrust = 0;
+    public int trustLevel = 5;
     public Slider trustSlider;
 
-    void Awake()
+    private void Awake()
     {
         Instance = this;
     }
 
-    void Start()
+    private void Start()
     {
-        
         if (trustSlider != null)
         {
             trustSlider.maxValue = maxTrust;
@@ -31,23 +31,27 @@ public class TrustManager : MonoBehaviour
         trustLevel += amount;
         trustLevel = Mathf.Clamp(trustLevel, minTrust, maxTrust);
 
-        Debug.Log("🔷 Trust Level: " + trustLevel);
-
-        if (trustLevel == maxTrust)
-        {
-            Debug.Log("🎉 You win!");
-            // Add win logic here
-        }
-        else if (trustLevel == minTrust)
-        {
-            Debug.Log("💀 You lose!");
-            // Add lose logic here
-        }
-
-        // Optionally update UI here if you make a trust bar
         if (trustSlider != null)
-        {
             trustSlider.value = trustLevel;
+
+        if (trustLevel >= maxTrust)
+        {
+            SceneManager.LoadScene("WinScene");
         }
+        else if (trustLevel <= minTrust)
+        {
+            SceneManager.LoadScene("LoseScene");
+        }
+    }
+
+    public void StartGame()
+    {
+        SceneManager.LoadScene("Game");
+        Debug.Log("playinggg");
+    }
+
+    public void ReturnToStart()
+    {
+        SceneManager.LoadScene("StartScene");
     }
 }
